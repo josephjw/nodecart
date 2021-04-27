@@ -7,7 +7,7 @@ var faker = require('faker');
 
 var mongoose = require('mongoose');
 mongoose.Promise = global.Promise;
-mongoose.connect('localhost:27017/shopping');
+mongoose.connect('mongodb://localhost:27017/shopping',{useMongoClient:true});
 
 var products = [];
 
